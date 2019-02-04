@@ -5,7 +5,8 @@ node {
    stage('Unit Test') {
       // run the unit tests
       dir("hello_world") {
-	// def sh
+	 def sh
+	 def sudo
          sudo sh "virtualenv .env"
          sudo sh ". .env/bin/activate"
          sudo sh "pip install requests --upgrade"
