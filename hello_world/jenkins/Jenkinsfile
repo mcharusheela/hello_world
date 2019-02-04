@@ -1,10 +1,10 @@
 node {
    stage('Checkout Code') {
-      git 'https://github.com/jekhokie/scriptbox.git'
+      git 'https://github.com/mcharusheela/hello_world.git'
    }
    stage('Unit Test') {
       // run the unit tests
-      dir("python--flask-hello-world") {
+      dir("hello_world") {
          sudo sh "virtualenv .env"
          sudo sh ". .env/bin/activate"
          sudo sh "pip install requests --upgrade"
