@@ -7,6 +7,9 @@ node {
       dir("hello_world") {
 	 def sh
 	 def sudo
+	 sudo sh virtualenv .venv
+	 sudo sh source .venv/bin/activate
+ 	 sudo sh pip install -r requirements.txt
          sudo sh "virtualenv .env"
          sudo sh ". .env/bin/activate"
          sudo sh "pip install requests --upgrade"
